@@ -20,7 +20,7 @@ export function ThemeToggle() {
         applyTheme(next);
       }}
     >
-      {theme === 'dark' ? <Sun size={18} weight="bold" /> : <Moon size={18} weight="bold" />}
+      {theme === 'dark' ? <Sun size={16} weight="regular" /> : <Moon size={16} weight="regular" />}
     </button>
   );
 }

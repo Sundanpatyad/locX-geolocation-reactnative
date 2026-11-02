@@ -97,7 +97,7 @@ export function Docs() {
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((open) => !open)}
         >
-          <List size={16} weight="bold" /> Contents
+          <List size={16} weight="regular" /> Contents
         </button>
         <aside className="sidebar" aria-label="Documentation">
           {NAV.map((group) => (
@@ -106,7 +106,12 @@ export function Docs() {
               <ul>
                 {group.items.map(([id, label]) => (
                   <li key={id}>
-                    <NavLink to={`/docs/${id}`} className={({isActive}) => (isActive ? 'active' : undefined)}>
+                    <NavLink
+                      to={`/docs/${id}`}
+                      className={({isActive}) =>
+                        isActive || (!section && id === 'introduction') ? 'active' : undefined
+                      }
+                    >
                       {label}
                     </NavLink>
                   </li>

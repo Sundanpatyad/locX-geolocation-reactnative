@@ -3,6 +3,8 @@
 `locX` is a React Native background-location engine for Android and iOS. It is
 free, MIT licensed, and needs no license key for debug or release builds.
 
+Website: https://sundanpatyad.github.io/locX-geolocation-reactnative/
+
 - Background tracking with a durable SQLite queue and automatic HTTP upload
 - Motion detection: GPS turns off while the device is stationary
 - Odometer: total distance travelled, stored on every point

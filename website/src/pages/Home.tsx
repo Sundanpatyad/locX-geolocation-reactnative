@@ -6,8 +6,6 @@ import {
   CircleDashed,
   Database,
   Lightning,
-  NavigationArrow,
-  Package,
   Path,
   Power,
   PuzzlePiece,
@@ -59,46 +57,48 @@ export function Home() {
       <Header />
       <main id="main">
         <section className="hero">
-          <div className="wrap hero-grid">
-            <div>
-              <h1>
-                Background location that <em>survives offline.</em>
-              </h1>
-              <p className="hero-sub">
-                A React Native engine that writes each fix to native SQLite, then uploads in retried batches.
-              </p>
-              <div className="hero-actions">
-                <InstallCopy command="npm install react-native-locx" />
-                <div className="hero-links">
-                  <Link className="btn btn-primary" to="/docs">
-                    Read the docs <ArrowRight size={16} weight="bold" />
-                  </Link>
-                  <a className="btn btn-ghost" href="https://www.npmjs.com/package/react-native-locx">
-                    <Package size={16} weight="bold" /> npm
-                  </a>
-                  <a
-                    className="btn btn-ghost"
-                    href="https://github.com/Sundanpatyad/locX-geolocation-reactnative"
-                  >
-                    GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-            <TrackField />
+          <div className="wrap hero-copy">
+            <InstallCopy command="npm install react-native-locx" />
+            <h1>Background location that survives offline.</h1>
+            <p className="hero-sub">
+              A React Native engine that writes each fix to native SQLite, then uploads in retried batches.
+            </p>
+            <Link className="btn btn-primary" to="/docs">
+              Read the docs <ArrowRight size={16} weight="bold" />
+            </Link>
+          </div>
+          <TrackField />
+        </section>
+
+        <section className="proof" aria-label="Product facts">
+          <div className="wrap proof-row">
+            <span>MIT licensed</span>
+            <span>
+              <AndroidLogo size={16} weight="regular" /> Android
+            </span>
+            <span>
+              <AppleLogo size={16} weight="regular" /> iOS
+            </span>
+            <span>No license key</span>
+            <span>
+              <Lightning size={16} weight="regular" /> TurboModule
+            </span>
           </div>
         </section>
 
         <section className="section" id="features">
           <div className="wrap">
             <h2>Native tracking, a durable queue, and the OS still in charge.</h2>
-            <p className="lede">
-              MIT licensed. No license key for debug or release. Android and iOS, new-architecture TurboModule, Expo
-              config plugin.
-            </p>
             <div className="bento">
               <article className="cell c-track">
-                <NavigationArrow className="cell-icon" size={28} weight="duotone" />
+                <div className="cell-media">
+                  <img
+                    src={`${import.meta.env.BASE_URL}media/instrument-sm.jpg`}
+                    alt=""
+                    width={700}
+                    height={394}
+                  />
+                </div>
                 <h3>Background tracking with a foreground service</h3>
                 <p>
                   Android runs a visible location service after Recents swipe. iOS uses standard updates,
@@ -106,7 +106,7 @@ export function Home() {
                 </p>
               </article>
               <article className="cell c-queue">
-                <Database className="cell-icon" size={28} weight="duotone" />
+                <Database className="cell-icon" size={22} weight="regular" />
                 <h3>Offline Room/SQLite queue</h3>
                 <p>
                   Points land in SQLite (Room on Android) before any network call. Batches retry with exponential
@@ -132,7 +132,7 @@ export function Home() {
                 </div>
               </article>
               <article className="cell c-motion">
-                <BatteryCharging className="cell-icon" size={28} weight="duotone" />
+                <BatteryCharging className="cell-icon" size={22} weight="regular" />
                 <h3>GPS off when stationary</h3>
                 <p>
                   Stay inside a 50 m radius for 5 minutes and GPS turns off. Leaving the area, activity recognition, or{' '}
@@ -140,7 +140,7 @@ export function Home() {
                 </p>
               </article>
               <article className="cell c-odo">
-                <Path className="cell-icon" size={28} weight="duotone" />
+                <Path className="cell-icon" size={22} weight="regular" />
                 <h3>Odometer on every point</h3>
                 <p>Total metres travelled, persisted across restarts. Fixes worse than 100 m are skipped.</p>
                 <div className="odo-value">
@@ -148,7 +148,7 @@ export function Home() {
                 </div>
               </article>
               <article className="cell c-geo">
-                <CircleDashed className="cell-icon" size={28} weight="duotone" />
+                <CircleDashed className="cell-icon" size={22} weight="regular" />
                 <h3>Geofencing enter, exit, dwell</h3>
                 <p>OS-monitored regions with custom extras, stored and re-registered after reboot and app updates.</p>
                 <div className="geo-actions">
@@ -158,7 +158,7 @@ export function Home() {
                 </div>
               </article>
               <article className="cell c-headless">
-                <Power className="cell-icon" size={28} weight="duotone" />
+                <Power className="cell-icon" size={22} weight="regular" />
                 <h3>Headless when killed, start on boot</h3>
                 <p>
                   Handle events while the UI is gone. Register <code>registerHeadlessTask</code> in <code>index.js</code>
@@ -170,16 +170,16 @@ export function Home() {
                 <p>Kotlin and Swift engines, codegen TurboModule, Expo prebuild plugin.</p>
                 <ul className="plat-list">
                   <li>
-                    <AndroidLogo size={18} weight="bold" /> Android, Kotlin
+                    <AndroidLogo size={16} weight="regular" /> Android, Kotlin
                   </li>
                   <li>
-                    <AppleLogo size={18} weight="bold" /> iOS 14+, Swift
+                    <AppleLogo size={16} weight="regular" /> iOS 14+, Swift
                   </li>
                   <li>
-                    <Lightning size={18} weight="bold" /> TurboModule, RN 0.76+
+                    <Lightning size={16} weight="regular" /> TurboModule, RN 0.76+
                   </li>
                   <li>
-                    <PuzzlePiece size={18} weight="bold" /> Expo config plugin
+                    <PuzzlePiece size={16} weight="regular" /> Expo config plugin
                   </li>
                 </ul>
               </article>
@@ -229,11 +229,11 @@ export function Home() {
           </div>
         </section>
 
-        <section className="section">
+        <section className="section section-code">
           <div className="wrap">
             <h2>Configure, request permission, start.</h2>
             <p className="lede">That order is required. Config is stored natively so background restarts reuse it.</p>
-            <div style={{marginTop: 24}}>
+            <div className="code-stage">
               <CodeBlock code={QUICKSTART} lang="ts" label="App.tsx" />
             </div>
           </div>
