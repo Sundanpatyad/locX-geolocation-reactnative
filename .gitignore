@@ -1,7 +1,11 @@
 node_modules/
+website/node_modules/
+website/dist/
 .DS_Store
 *.log
 lib/
+!website/src/lib/
+!website/src/lib/**
 coverage/
 .expo/
 apps/demo/android/.gradle/

@@ -30,11 +30,14 @@ opened. No compliant SDK can bypass that rule.
 
 Do not hide the Android notification or the iOS status-bar location indicator.
 
+Website: https://sundanpatyad.github.io/locX-geolocation-reactnative/
+
 ## Workspace
 
 - `packages/locx`: reusable React Native package and native engines
 - `apps/demo`: diagnostic UI
 - `tools/mock-server`: local HTTP receiver with duplicate-id logging
+- `website`: Vite + React documentation site
 
 ## Install
 
