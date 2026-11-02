@@ -6,11 +6,11 @@ Pod::Spec.new do |s|
   s.name         = "locx"
   s.version      = package["version"]
   s.summary      = package["description"]
-  s.homepage     = "https://github.com/Sundanpatyad/locx-geolocation"
+  s.homepage     = "https://github.com/Sundanpatyad/locX-geolocation-reactnative"
   s.license      = package["license"]
   s.authors      = { "Sundan Sharma" => "https://github.com/Sundanpatyad" }
   s.platforms    = { :ios => "14.0" }
-  s.source       = { :git => "https://github.com/Sundanpatyad/locx-geolocation.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/Sundanpatyad/locX-geolocation-reactnative.git", :tag => "#{s.version}" }
 
   s.source_files = "ios/**/*.{h,m,mm,swift}"
   s.resource_bundles = {

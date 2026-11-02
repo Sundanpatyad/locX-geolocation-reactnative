@@ -6,13 +6,13 @@
   "author": "Sundan Sharma",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sundanpatyad/locx-geolocation.git",
+    "url": "git+https://github.com/Sundanpatyad/locX-geolocation-reactnative.git",
     "directory": "packages/locx"
   },
   "bugs": {
-    "url": "https://github.com/Sundanpatyad/locx-geolocation/issues"
+    "url": "https://github.com/Sundanpatyad/locX-geolocation-reactnative/issues"
   },
-  "homepage": "https://github.com/Sundanpatyad/locx-geolocation#readme",
+  "homepage": "https://github.com/Sundanpatyad/locX-geolocation-reactnative#readme",
   "keywords": [
     "react-native",
     "expo",
