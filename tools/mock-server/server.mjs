@@ -12,6 +12,31 @@ createServer((request, response) => {
     return;
   }
 
+  if (request.method === 'POST' && request.url === '/events') {
+    let raw = '';
+    request.setEncoding('utf8');
+    request.on('data', chunk => {
+      raw += chunk;
+    });
+    request.on('end', () => {
+      try {
+        const event = JSON.parse(raw);
+        console.log(
+          JSON.stringify({
+            receivedAt: new Date().toISOString(),
+            event: event.name,
+            source: event.source,
+            params: event.params,
+          }),
+        );
+        response.writeHead(204).end();
+      } catch {
+        response.writeHead(400).end();
+      }
+    });
+    return;
+  }
+
   if (request.method !== 'POST' || request.url !== '/locations') {
     response.writeHead(404).end();
     return;
@@ -34,11 +59,21 @@ createServer((request, response) => {
       for (const location of locations) {
         if (location?.id) seen.add(location.id);
       }
+      const last = locations[locations.length - 1] ?? {};
       console.log(
         JSON.stringify({
           receivedAt: new Date().toISOString(),
           count: locations.length,
           duplicates: duplicates.length,
+          last: {
+            latitude: last.latitude,
+            longitude: last.longitude,
+            accuracy: last.accuracy,
+            odometer: last.odometer,
+            isMoving: last.isMoving,
+            activity: last.activity,
+            recordedAt: last.recordedAt,
+          },
           ids: locations.map(location => location.id),
         }),
       );

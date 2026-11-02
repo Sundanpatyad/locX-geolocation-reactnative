@@ -1,6 +1,6 @@
 # locX Demo
 
-Test app for `@locx/react-native`. Keep the mock server running, then install
+Test app for `react-native-locx`. Keep the mock server running, then install
 this app on an emulator or phone.
 
 ## 1. Mock server (separate terminal)

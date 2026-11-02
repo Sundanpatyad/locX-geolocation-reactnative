@@ -8,9 +8,9 @@
     "tools/*"
   ],
   "scripts": {
-    "build": "npm run build -w @locx/react-native",
-    "test": "npm run test -w @locx/react-native",
-    "typecheck": "npm run typecheck -w @locx/react-native",
+    "build": "npm run build -w react-native-locx",
+    "test": "npm run test -w react-native-locx",
+    "typecheck": "npm run typecheck -w react-native-locx",
     "mock-server": "npm run start -w @locx/mock-server"
   },
   "engines": {

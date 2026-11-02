@@ -1,5 +1,5 @@
 {
-  "name": "@locx/react-native",
+  "name": "react-native-locx",
   "version": "0.1.0",
   "description": "Open React Native background location and durable delivery engine",
   "license": "MIT",
@@ -20,7 +20,11 @@
     "ios",
     "background",
     "geolocation",
-    "location-tracking"
+    "location-tracking",
+    "geofencing",
+    "motion-detection",
+    "odometer",
+    "headless"
   ],
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
@@ -42,7 +46,8 @@
   "scripts": {
     "build": "bob build",
     "typecheck": "tsc --noEmit",
-    "test": "jest"
+    "test": "jest",
+    "prepack": "bob build"
   },
   "peerDependencies": {
     "@expo/config-plugins": ">=8",

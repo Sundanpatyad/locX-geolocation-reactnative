@@ -39,7 +39,7 @@ Do not hide the Android notification or the iOS status-bar location indicator.
 ## Install
 
 ```sh
-npm install @locx/react-native
+npm install react-native-locx
 cd ios && pod install
 ```
 
@@ -50,7 +50,7 @@ cd ios && pod install
   "expo": {
     "plugins": [
       [
-        "@locx/react-native",
+        "react-native-locx",
         {
           "whenInUsePermission": "Location is used to show your trip.",
           "alwaysPermission": "Location is used to record your trip in the background.",
@@ -94,7 +94,7 @@ To use `motion.activityRecognition`, add to `android/app/src/main/AndroidManifes
 ## Usage
 
 ```ts
-import LocX from '@locx/react-native';
+import LocX from 'react-native-locx';
 
 await LocX.configure({
   endpoint: 'https://api.example.com/v1/locations',
@@ -218,7 +218,7 @@ Register the handler once in `index.js`, outside any component:
 
 ```js
 import {AppRegistry} from 'react-native';
-import LocX from '@locx/react-native';
+import LocX from 'react-native-locx';
 import App from './App';
 
 LocX.registerHeadlessTask(async ({name, params}) => {
