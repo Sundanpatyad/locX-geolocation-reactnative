@@ -1,0 +1,19 @@
+{
+  "name": "locx-workspace",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "packages/*",
+    "apps/*",
+    "tools/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @locx/react-native",
+    "test": "npm run test -w @locx/react-native",
+    "typecheck": "npm run typecheck -w @locx/react-native",
+    "mock-server": "npm run start -w @locx/mock-server"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

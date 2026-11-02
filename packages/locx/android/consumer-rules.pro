@@ -1,0 +1,2 @@
+-keep class com.locx.** { *; }
+-keep class com.locx.db.** { *; }

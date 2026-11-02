@@ -1,0 +1,17 @@
+node_modules/
+.DS_Store
+*.log
+lib/
+coverage/
+.expo/
+apps/demo/android/.gradle/
+apps/demo/android/app/build/
+apps/demo/android/app/.cxx/
+apps/demo/android/build/
+apps/demo/ios/Pods/
+apps/demo/ios/.xcode.env.local
+apps/demo/ios/build/
+packages/locx/android/build/
+apps/demo/vendor/
+*.apk
+*.aab
